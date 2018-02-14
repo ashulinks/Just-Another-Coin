@@ -5,7 +5,7 @@ import "./Ownable.sol";
 import "./Entropy.sol";
 
 
-contract RPS{
+contract rockpaperscissors is Ownable {
     address public j1; 
     address public j2; 
     enum Move {Null, Rock, Paper, Scissors} 
@@ -15,7 +15,7 @@ contract RPS{
     uint256 public TIMEOUT = 5 minutes; 
     uint256 public lastAction; 
 
-    function RPS(bytes32 _c1Hash, address _j2) public payable {
+    function rockpaperscissors(bytes32 _c1Hash, address _j2) public payable {
         stake = msg.value; 
         j1=msg.sender;
         j2=_j2;
